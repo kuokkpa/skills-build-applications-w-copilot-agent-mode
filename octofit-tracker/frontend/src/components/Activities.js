@@ -23,15 +23,15 @@ const Activities = () => {
         <table className="table table-striped table-bordered">
           <thead className="table-dark">
             <tr>
-              <th>Name</th>
-              <th>Description</th>
+              <th>Type</th>
+              <th>Duration (min)</th>
             </tr>
           </thead>
           <tbody>
             {activities.map((activity, idx) => (
               <tr key={activity.id || idx}>
-                <td>{activity.name || '-'}</td>
-                <td>{activity.description || '-'}</td>
+                <td>{activity.type || '-'}</td>
+                <td>{activity.duration || '-'}</td>
               </tr>
             ))}
           </tbody>
