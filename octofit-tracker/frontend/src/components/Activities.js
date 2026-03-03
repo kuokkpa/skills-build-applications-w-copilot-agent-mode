@@ -24,7 +24,7 @@ const Activities = () => {
           <thead className="table-dark">
             <tr>
               <th>Type</th>
-              <th>Duration</th>
+              <th>Duration (min)</th>
             </tr>
           </thead>
           <tbody>
