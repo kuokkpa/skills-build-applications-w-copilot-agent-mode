@@ -18,11 +18,11 @@ class Command(BaseCommand):
         marvel = Team.objects.create(name='Marvel')
         dc = Team.objects.create(name='DC')
 
-        # Create users
-        ironman = User.objects.create_user(username='ironman', email='ironman@marvel.com', password='pass', team=marvel)
-        captain = User.objects.create_user(username='captain', email='captain@marvel.com', password='pass', team=marvel)
-        batman = User.objects.create_user(username='batman', email='batman@dc.com', password='pass', team=dc)
-        superman = User.objects.create_user(username='superman', email='superman@dc.com', password='pass', team=dc)
+        # Create users (passwords are temporary test-only values and should not be used in production)
+        ironman = User.objects.create_user(username='ironman', email='ironman@marvel.com', password='Ir0nM@n_T3st!', team=marvel)
+        captain = User.objects.create_user(username='captain', email='captain@marvel.com', password='C@pt@in_T3st!', team=marvel)
+        batman = User.objects.create_user(username='batman', email='batman@dc.com', password='B@tm@n_T3st!', team=dc)
+        superman = User.objects.create_user(username='superman', email='superman@dc.com', password='Sup3rm@n_T3st!', team=dc)
 
         # Create activities
         Activity.objects.create(user=ironman, type='run', duration=30)
