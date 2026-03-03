@@ -7,7 +7,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 class TeamViewSet(viewsets.ModelViewSet):
-    queryset = Team.objects.all()
+    queryset = Team.objects.prefetch_related('user_set').all()
     serializer_class = TeamSerializer
 
 class ActivityViewSet(viewsets.ModelViewSet):

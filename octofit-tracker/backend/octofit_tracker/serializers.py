@@ -2,9 +2,14 @@ from rest_framework import serializers
 from .models import User, Team, Activity, Workout, Leaderboard
 
 class TeamSerializer(serializers.ModelSerializer):
+    members = serializers.SerializerMethodField()
+
+    def get_members(self, obj):
+        return list(obj.user_set.values_list('username', flat=True))
+
     class Meta:
         model = Team
-        fields = '__all__'
+        fields = ['id', 'name', 'members']
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
