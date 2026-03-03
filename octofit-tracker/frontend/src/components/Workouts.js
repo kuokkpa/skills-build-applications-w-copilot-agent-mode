@@ -24,16 +24,14 @@ const Workouts = () => {
           <thead className="table-dark">
             <tr>
               <th>Name</th>
-              <th>Type</th>
-              <th>Duration</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
             {workouts.map((workout, idx) => (
               <tr key={workout.id || idx}>
                 <td>{workout.name || '-'}</td>
-                <td>{workout.type || '-'}</td>
-                <td>{workout.duration || '-'}</td>
+                <td>{workout.description || '-'}</td>
               </tr>
             ))}
           </tbody>
