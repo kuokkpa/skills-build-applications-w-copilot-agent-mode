@@ -31,7 +31,7 @@ const Leaderboard = () => {
             {leaderboard.map((entry, idx) => (
               <tr key={entry.id || idx}>
                 <td>{entry.name || '-'}</td>
-                <td>{entry.score || '-'}</td>
+                <td>{entry.points || '-'}</td>
               </tr>
             ))}
           </tbody>
